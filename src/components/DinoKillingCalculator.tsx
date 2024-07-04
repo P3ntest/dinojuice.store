@@ -36,45 +36,48 @@ export function DinoKillingCalculator() {
   );
 
   return (
-    <div className="section py-40">
+    <div className="w-full">
       <div className="bg-secondary border-dark border-8 rounded-3xl p-10 relative flex flex-col gap-6">
         <WaterMark />
-        <div className="font-black text-4xl drop-shadow-xl">
-          dino calculator.
-        </div>
-        <div>
-          <div className="font-bold">liters / 100km:</div>
-          <Input
-            type="number"
-            style={{
-              outline: "none",
-            }}
-            value={litersPer100km}
-            onChange={(e) => setLitersPer100km(parseInt(e.target.value))}
-          />
-        </div>
-        <div>
-          <div className="font-bold">km / day:</div>
-          <Input
-            type="number"
-            style={{
-              outline: "none",
-            }}
-            value={kmPerDay}
-            onChange={(e) => setKmPerDay(parseInt(e.target.value))}
-          />
-        </div>
+        <div className="flex flex-col items-center">
+          <div className="font-black text-4xl drop-shadow-xl">
+            dino calculator.
+          </div>
+          <div>
+            <div className="font-bold">liters / 100km:</div>
+            <Input
+              type="number"
+              style={{
+                outline: "none",
+              }}
+              value={litersPer100km}
+              onChange={(e) => setLitersPer100km(parseInt(e.target.value))}
+            />
+          </div>
+          <div>
+            <div className="font-bold">km / day:</div>
+            <Input
+              type="number"
+              style={{
+                outline: "none",
+              }}
+              value={kmPerDay}
+              onChange={(e) => setKmPerDay(parseInt(e.target.value))}
+            />
+          </div>
 
-        <div className="w-min">
-          <Button
-            onClick={() => {
-              setCurrentDinosPerDay(
-                parseFloat(((litersPer100km / 100) * kmPerDay * 5).toFixed(1))
-              );
-            }}
-          >
-            calculate.
-          </Button>
+          <div className="pt-10">
+            <Button
+              onClick={() => {
+                setCurrentDinosPerDay(
+                  parseFloat(((litersPer100km / 100) * kmPerDay * 5).toFixed(1))
+                );
+              }}
+              className="w-96"
+            >
+              calculate.
+            </Button>
+          </div>
         </div>
         {currentDinosPerDay !== null && (
           <div className="font-bold text-2xl flex flex-col gap-4">

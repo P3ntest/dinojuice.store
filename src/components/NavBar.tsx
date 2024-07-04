@@ -18,6 +18,14 @@ export function NavBar() {
           />
           <img src={logoText} alt="" className="h-10 drop-shadow-xl" />
         </Link>
+        <div className="flex flex-row items-center gap-5 font-bold drop-shadow-xl">
+          <Link to="/calculator">
+            <div>calculator.</div>
+          </Link>
+          <Link to="/login">
+            <div>member.</div>
+          </Link>
+        </div>
         <Link to="/login">
           <Button>login.</Button>
         </Link>

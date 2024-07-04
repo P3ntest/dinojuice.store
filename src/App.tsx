@@ -7,10 +7,11 @@ import {
   createRoutesFromElements,
 } from "react-router-dom";
 import { DinoKillingCalculator } from "./components/DinoKillingCalculator";
-import { Hero } from "./components/Hero";
+import { Hero, SecondHero } from "./components/Hero";
 import { NavBar } from "./components/NavBar";
 import { LoyaltyCard } from "./components/LoyalityCard";
 import { LoginPage } from "./components/LoginPage";
+import { CalculatorPage } from "./components/ClaculatorPage";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -28,11 +29,12 @@ const router = createBrowserRouter(
           element={
             <div>
               <Hero />
-              <DinoKillingCalculator />
+              <SecondHero />
             </div>
           }
         />
         <Route path="/login" element={<LoginPage />} />
+        <Route path="/calculator" element={<CalculatorPage />} />
       </Route>
     </>
   )

@@ -16,7 +16,7 @@ export function LoyaltyCard() {
         </div>
       </div>
       <div className="flex flex-row justify-between items-start px-7">
-        <div className="font-bold text-sm">
+        <div className="font-bold text-sm text-start">
           1. Refill your car at ony of your dinojuice™ bars
           <br />
           2. Kill all 7 dinos
