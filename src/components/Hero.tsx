@@ -14,7 +14,7 @@ export function Hero() {
               50,
               "because e-vehicles are expensive.",
               1000,
-              "because loud cards are more fun.",
+              "because loud cars are more fun.",
               1000,
               "because we love the smell of gasoline.",
               1000,
