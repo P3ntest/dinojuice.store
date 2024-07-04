@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "Jost", sans-serif;
+  @apply text-dark;
+}
+
+body {
+  @apply bg-primary;
+}
+
+.section {
+  @apply px-5 md:px-20 xl:px-60 max-w-[1920px];
+}
