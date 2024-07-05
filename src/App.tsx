@@ -12,6 +12,7 @@ import { NavBar } from "./components/NavBar";
 import { LoyaltyCard } from "./components/LoyalityCard";
 import { LoginPage } from "./components/LoginPage";
 import { CalculatorPage } from "./components/ClaculatorPage";
+import { TosPage } from "./components/TosPage";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -35,6 +36,7 @@ const router = createBrowserRouter(
         />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/calculator" element={<CalculatorPage />} />
+        <Route path="/tos" element={<TosPage />} />
       </Route>
     </>
   )

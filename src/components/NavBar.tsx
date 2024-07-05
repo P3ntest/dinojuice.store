@@ -25,6 +25,9 @@ export function NavBar() {
           <Link to="/login">
             <div>member.</div>
           </Link>
+          <Link to="/tos">
+            <div>terms.</div>
+          </Link>
         </div>
         <Link to="/login">
           <Button>login.</Button>

@@ -14,5 +14,5 @@ body {
 }
 
 .section {
-  @apply px-5 md:px-20 xl:px-60 max-w-[1920px];
+  @apply px-5 md:px-20 xl:px-60 2xl:px-96;
 }
