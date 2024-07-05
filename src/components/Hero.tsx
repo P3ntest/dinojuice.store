@@ -1,6 +1,8 @@
 import { TypeAnimation } from "react-type-animation";
 import dino from "../assets/dino.svg";
 import logoText from "../assets/logotext_secondary.svg";
+import CountUp from "react-countup";
+import { useEffect, useState } from "react";
 
 export function Hero() {
   return (
@@ -48,17 +50,40 @@ export function Hero() {
 
 export function SecondHero() {
   return (
-    <div className="w-full bg-secondary border-t-dark border-t-[20px] shadow-2xl">
+    <div className="w-full bg-secondary border-y-dark border-y-[20px] shadow-2xl">
       <div className="section">
-        <div className="text-center font-black text-7xl py-40 drop-shadow-2xl">
+        <div className="text-center font-black text-7xl pt-40 drop-shadow-2xl">
           the gas station of the future.
         </div>
-        {/* <iframe
-          width="425"
-          height="350"
-          scrolling="no"
-          src="https://www.openstreetmap.org/export/embed.html?bbox=9.699318408966066%2C47.484177893725764%2C9.729595184326174%2C47.49977861091604&amp;layer=mapnik&amp;marker=47.49197883161885%2C9.714467525482178"
-        ></iframe> */}
+        <div className="flex flex-row gap-8 items-stretch justify-stretch py-20">
+          {[
+            {
+              stat: 2830,
+              suffix: "m",
+              text: "dinos burned.",
+            },
+            {
+              stat: 0,
+              text: "minutes of charging like a loser.",
+            },
+            {
+              stat: 7250 + (Date.now() - 1720199782000) / 1000,
+              text: "customer loyalty cards filled.",
+            },
+          ].map(({ stat, text, suffix }) => (
+            <div className="border-dark border-[9px] flex-1 bg-primary rounded-2xl p-3 font-black text-xl">
+              <div className="text-center text-5xl py-4">
+                <CountUp
+                  end={stat}
+                  enableScrollSpy
+                  duration={4}
+                  suffix={suffix}
+                />
+              </div>
+              <div className="text-center">{text}</div>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
